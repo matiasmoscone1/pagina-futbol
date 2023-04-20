@@ -42,7 +42,7 @@ function App() {
     showStandings();
   }, [liga]);
 
-  //console.log(standings);
+  console.log(standings);
 
 
   return (

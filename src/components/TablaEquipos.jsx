@@ -20,8 +20,8 @@ function TablaEquipos({standings}){
           </thead>
           <tbody>
           {
-          standings.map((equipo) => {
-          return(
+          standings.map((equipo) => {             
+            return(
             <tr key={equipo.team_key}>
               <td>{equipo.standing_place}</td>
               <td>{equipo.standing_team}</td>

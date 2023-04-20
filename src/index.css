@@ -2,13 +2,18 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #1a1713;
 }
 
 .main-container{
-    background-color: #1a1713;
     color: white;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .live-container{
@@ -103,10 +108,11 @@
     border-bottom: 0.5px solid white;
 }
 
+
 @media screen and (max-width: 768px){
     .paises-container{
         display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 50% 50%;   
     }
     
@@ -115,6 +121,7 @@
         height: 1.5em;
         cursor: pointer;
     }
+
 
 }
 
