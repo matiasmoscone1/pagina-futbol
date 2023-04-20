@@ -1,0 +1,123 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    background-color: #1a1713;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.live-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid white;
+}
+
+.live-partido{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.live-partido img{
+    width: 20px;
+    height: 20px;
+}
+
+.live-partido{
+    font-size: small;
+}
+
+.live-partido-tiempo{
+    font-size:x-small;
+    padding-top: 0.5em;
+}
+
+/* NAVBAR */
+.navbar-container{
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 0.5px solid white;
+}   
+
+.navbar-container button {
+    background-color: transparent;
+    width: 100%;
+    height: 5vh;
+    cursor: pointer;
+    color: white;
+}
+
+.link-navbar{
+    width: 100%;
+}
+
+.posiciones-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paises-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    list-style: none;    
+    padding: 1em;
+}
+
+.paises-container li button{
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.tabla-equipos-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabla-equipos-container table{
+    width: 50%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 0.5px solid white;
+}
+
+.tabla-equipos-container td{
+    border-bottom: 0.5px solid white;
+}
+
+.tabla-equipos-container th{
+    border-bottom: 0.5px solid white;
+}
+
+@media screen and (max-width: 768px){
+    .paises-container{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 50% 50%;   
+    }
+    
+    .paises-container li button{
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+    }
+
+}
+
+
+
+
