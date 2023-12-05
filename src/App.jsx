@@ -14,10 +14,12 @@ function App() {
   const [standings, setStandings] = useState([]);
   const [liga, setLiga] = useState("152");
 
+  const apiKey = "086d2235ed287cf37a685c6d0a6f9fed4af9311e8dcdce1929e4552e1a01c8f5";
 
   //Consulta a la api por partidos en vivo
   const liveScore = async () => {
-    const response = await fetch("https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=b06a24d4bb4554c827dcd4766c77fa98ad05c2fcb08a19917606bd9316f6b654");
+    // (API VIEJA) const response = await fetch ("https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=b06a24d4bb4554c827dcd4766c77fa98ad05c2fcb08a19917606bd9316f6b654");
+    const response = await fetch (`https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=${apiKey}`);
     const data = await response.json();
     setLive(data.result);
   }
@@ -32,7 +34,8 @@ function App() {
 
   //Consulta a la api por determinada liga
   const showStandings = () => {
-    fetch(`https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${liga}&APIkey=b06a24d4bb4554c827dcd4766c77fa98ad05c2fcb08a19917606bd9316f6b654`)
+    // (API VIEJA)fetch(`https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${liga}&APIkey=b06a24d4bb4554c827dcd4766c77fa98ad05c2fcb08a19917606bd9316f6b654`)
+    fetch(`https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${liga}&APIkey=${apiKey}`) 
     .then((response) => response.json())
     .then((data) => setStandings(data.result.total));
   }
